@@ -1,0 +1,161 @@
+:root {
+    --font-family: 'Sora', sans-serif;
+    --bg-color-primary: #10375c;
+    --bg-color-secondary: #2e80ce;
+    --white: #fff;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background: transparent;
+}
+
+/* Common */
+.main-content {
+    width: 1170px;
+    max-width: calc(100vw - 64px);
+    margin: 0 auto;
+}
+
+.center-y {
+    display: flex;
+    align-items: center;
+}
+
+.left-column {
+    width: 570px;
+}
+
+.right-column {
+    width: 470px;
+    margin-left: 130px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 205px;
+    border-radius: 30px;
+    background: #2e80ce;
+    padding: 14px 16px;
+    color: var(--white);
+    font-size: 1.8rem;
+    line-height: 1.67;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn--small {
+    min-width: 104px;
+    padding: 6.3px 16px;
+    border-radius: 22px;
+    line-height: 1.75;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: var(--line-clamp, 1);
+}
+
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+
+.col-start-center {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Header */
+.header {
+    padding: 38px 0 8px;
+    background: var(--bg-color-primary);
+}
+
+.header.sticky {
+    position: sticky;
+    top: -30px;
+    z-index: 1;
+}
+
+.header__logo {
+    line-height: 0;
+}
+
+.header__nav {
+    margin-left: auto;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+}
+
+.nav__link,
+.cta-group__sign-in-btn {
+    position: relative;
+    color: #c9d2da;
+    font-weight: 300;
+    line-height: 1.75;
+    padding: 8px 21px;
+}
+
+.nav__link:hover,
+.nav__link--active {
+    text-shadow: 1px 0 0 currentColor;
+}
+
+.nav__link--active::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: var(--white);
+    border-radius: 50%;
+}
+
+.cta-group {
+    margin-left: 222px;
+}
+
+.cta-group__sign-in-btn {
+    margin-right: 7px;
+}
+
+.cta-group__sign-in-btn:hover {
+    text-decoration: underline;
+}
