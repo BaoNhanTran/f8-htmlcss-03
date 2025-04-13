@@ -91,6 +91,11 @@ button {
     --line-clamp: 2;
 }
 
+.section-spacing {
+    margin-top: 30px;
+    padding: 70px 0;
+}
+
 .col-start-center {
     display: flex;
     flex-direction: column;
@@ -113,6 +118,12 @@ button {
     letter-spacing: -1.4px;
 }
 
+.heading--smaller {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: normal;
+}
+
 .desc {
     color: #575f66;
     font-size: 1.8rem;
@@ -122,6 +133,12 @@ button {
 
 .desc--light {
     color: #c9d2da;
+}
+
+.desc--small {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
 }
 
 .image {
@@ -233,4 +250,63 @@ button {
     width: 210px;
     height: 410px;
     background-image: url('../../assets/img/hero-2.png');
+}
+
+/* Services-section */
+.services-section__row-top {
+    text-align: center;
+}
+
+.services-section__desc {
+    width: 468px;
+    margin: 18px auto 70px;
+}
+
+.services-section__img {
+    width: 570px;
+    height: 570px;
+    border-radius: 12px;
+    background: url('../../assets/img/services-img.png');
+}
+
+.services-section__row-bottom {
+    display: flex;
+}
+
+/* Services item */
+.service-item {
+    display: flex;
+    align-items: center;
+    padding: 21px 22px 20px;
+    border-radius: 10px;
+}
+
+.service-item__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #eff6fd;
+    flex-shrink: 0;
+    margin-right: 19px;
+    color: #10375c;
+}
+
+.service-item:hover {
+    box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
+}
+
+.service-item:hover .service-item__icon {
+    background: #2e80ce;
+    color: var(--white);
+}
+
+.service-item__desc {
+    margin-top: 8px;
+}
+
+.services-section__btn {
+    margin-top: 55px;
 }
