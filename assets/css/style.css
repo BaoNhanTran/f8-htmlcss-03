@@ -46,6 +46,22 @@ button {
     align-items: center;
 }
 
+.section-spacing {
+    margin-top: 30px;
+    padding: 70px 0;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.col-start-center {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
 .left-column {
     width: 570px;
 }
@@ -53,6 +69,17 @@ button {
 .right-column {
     width: 470px;
     margin-left: 130px;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: var(--line-clamp, 1);
+}
+
+.line-clamp.line-3 {
+    --line-clamp: 3;
 }
 
 .btn {
@@ -78,29 +105,6 @@ button {
     padding: 6.3px 16px;
     border-radius: 22px;
     line-height: 1.75;
-}
-
-.line-clamp {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    -webkit-line-clamp: var(--line-clamp, 1);
-}
-
-.line-clamp.line-3 {
-    --line-clamp: 3;
-}
-
-.section-spacing {
-    margin-top: 30px;
-    padding: 70px 0;
-}
-
-.col-start-center {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
 }
 
 .heading {
@@ -243,14 +247,14 @@ button {
 }
 
 /* Hero__img-block */
-.img-block__img-1 {
+.hero__img-1 {
     position: relative;
     width: 330px;
     height: 540px;
     background-image: url('../../assets/img/hero-1.png');
 }
 
-.img-block__img-2 {
+.hero__img-2 {
     margin-left: -6px;
     border-radius: 0px 6px 6px 0px;
     width: 210px;
@@ -272,7 +276,7 @@ button {
     width: 570px;
     height: 570px;
     border-radius: 12px;
-    background: url('../../assets/img/services-img.png');
+    background: url('../../assets/img/services-img.png') lightgray 0px -1.3px / 100% 149.93% no-repeat;
 }
 
 .services-section__row-bottom {
@@ -358,4 +362,30 @@ button {
 
 .step__desc {
     margin: 28px 0 18px;
+}
+
+/* Feature */
+.feature__body {
+    display: flex;
+}
+
+.feature__img-block {
+    display: grid;
+    grid-template-columns: 238px 1fr 58px;
+    grid-template-rows: 121px 249px 121px;
+}
+
+.feature__img-1 {
+    grid-area: 1 / 1 / 3 / 3;
+    background: url('../../assets/img/feature-img-1.png') lightgray -1.5px 0px / 108.398% 100% no-repeat;
+    box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.07);
+}
+
+.feature__img-2 {
+    grid-area: 2 / 2 / -1 / -1;
+    background-image: url('../../assets/img/feature-img-2.png');
+}
+
+.feature__desc {
+    margin: 18px 0 38px;
 }
