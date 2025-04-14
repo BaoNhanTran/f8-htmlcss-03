@@ -2,7 +2,9 @@
     --font-family: 'Sora', sans-serif;
     --primary: #10375c;
     --bg-color-secondary: #2e80ce;
+    --bg-color-tertiary: #eaf6ff;
     --white: #fff;
+    --text-color: #575f66;
 }
 
 html,
@@ -19,6 +21,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     font-weight: 400;
+    color: var(--text-color);
 }
 
 * {
@@ -83,7 +86,7 @@ button {
 }
 
 .btn {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     min-width: 205px;
@@ -115,27 +118,31 @@ button {
     letter-spacing: -1px;
 }
 
-.heading--large {
+.heading--lv1 {
     color: var(--white);
     font-size: 7rem;
     line-height: 1.14;
     letter-spacing: -1.4px;
 }
 
-.heading--small {
+.heading--lv2 {
     font-size: 2.6rem;
-    font-weight: 600;
     line-height: 1.38;
 }
 
-.heading--smaller {
+.heading--lv3 {
     font-size: 1.8rem;
-    font-weight: 600;
     line-height: normal;
 }
 
+.heading--lv5 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.62;
+}
+
 .desc {
-    color: #575f66;
+    color: var(--text-color);
     font-size: 1.8rem;
     font-weight: 300;
     line-height: 1.67;
@@ -145,10 +152,14 @@ button {
     color: #c9d2da;
 }
 
-.desc--small {
+.desc--lv2 {
     font-size: 1.6rem;
-    font-weight: 300;
     line-height: 1.75;
+}
+
+.desc--lv3 {
+    font-size: 1.4rem;
+    line-height: 1.86;
 }
 
 .image {
@@ -157,6 +168,31 @@ button {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 6px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 0 18px;
+}
+
+.control-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: var(--text-color);
+    border: 1px solid currentColor;
+    background: var(--white);
+    cursor: pointer;
+}
+
+.control-btn:hover {
+    color: var(--white);
+    border-color: var(--bg-color-secondary);
+    background: var(--bg-color-secondary);
 }
 
 /* Header */
@@ -251,7 +287,7 @@ button {
     position: relative;
     width: 330px;
     height: 540px;
-    background-image: url('../../assets/img/hero-1.png');
+    background-image: url('../img/hero-1.png');
 }
 
 .hero__img-2 {
@@ -259,7 +295,7 @@ button {
     border-radius: 0px 6px 6px 0px;
     width: 210px;
     height: 410px;
-    background-image: url('../../assets/img/hero-2.png');
+    background-image: url('../img/hero-2.png');
 }
 
 /* Services-section */
@@ -273,10 +309,11 @@ button {
 }
 
 .services-section__img {
-    width: 570px;
     height: 570px;
     border-radius: 12px;
-    background: url('../../assets/img/services-img.png') lightgray 0px -1.3px / 100% 149.93% no-repeat;
+    background-image: url('../img/services-img.png');
+    background-position: 0px -1.3px;
+    background-size: 100% 149.93%;
 }
 
 .services-section__row-bottom {
@@ -342,7 +379,7 @@ button {
     display: block;
     padding: 42px 43px;
     border-radius: 4px;
-    border: 16px solid #eaf6ff;
+    border: 16px solid var(--bg-color-tertiary);
     background: var(--white);
 }
 
@@ -377,15 +414,89 @@ button {
 
 .feature__img-1 {
     grid-area: 1 / 1 / 3 / 3;
-    background: url('../../assets/img/feature-img-1.png') lightgray -1.5px 0px / 108.398% 100% no-repeat;
+    background-image: url('../img/feature-img-1.png');
+    background-position: -1.5px 0px;
+    background-size: 108.398% 100%;
     box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.07);
 }
 
 .feature__img-2 {
     grid-area: 2 / 2 / -1 / -1;
-    background-image: url('../../assets/img/feature-img-2.png');
+    background-image: url('../img/feature-img-2.png');
 }
 
 .feature__desc {
     margin: 18px 0 38px;
+}
+
+/* Dentists */
+.dentists__row-top {
+    text-align: center;
+}
+
+.dentists__btn {
+    margin: 53px 0 85px;
+}
+
+.dentists-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 34px;
+}
+
+.dentist {
+    text-align: center;
+}
+
+.dentist__img-wrapper {
+    display: flex;
+    width: 270px;
+    height: 318px;
+    background: var(--bg-color-tertiary);
+    border-radius: 6px;
+    padding-top: 28px;
+    overflow: hidden;
+}
+
+.dentist__image {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color-tertiary);
+}
+
+.dentist__img-1 {
+    margin: 0 4px;
+    background-image: url('../img/dentist-1.png');
+    background-position: -153.123px -52.895px;
+    background-size: 208.148% 188.038%;
+}
+
+.dentist__img-2 {
+    background-image: url('../img/dentist-2.png');
+    background-position: -198.711px -23.406px;
+    background-size: 238.868% 147.382%;
+}
+
+.dentist__img-3 {
+    width: calc(100% + 2 * 11px);
+    height: calc(100% + 15px);
+    margin: -3px -11px -12px;
+    background-image: url('../img/dentist-3.png');
+    background-position: -180.805px -32.849px;
+    background-size: 209.541% 134.174%;
+}
+
+.dentist__img-4 {
+    margin: 0 9px 0 8px;
+    background-image: url('../img/dentist-4.png');
+    background-position: -71.171px -6.859px;
+    background-size: 186.916% 108.719%;
+}
+
+.dentist__heading {
+    margin-top: 12px;
+}
+
+.dentist__controls {
+    margin-top: 38px;
 }
