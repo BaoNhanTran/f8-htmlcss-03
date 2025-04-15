@@ -3,6 +3,7 @@
     --primary: #10375c;
     --bg-color-secondary: #2e80ce;
     --bg-color-tertiary: #eaf6ff;
+    --bg-color-quaternary: #f6fbff;
     --white: #fff;
     --text-color: #575f66;
 }
@@ -371,7 +372,7 @@ button {
 /* Guide */
 .guide {
     padding: 100px 0;
-    background: #f6fbff;
+    background: var(--bg-color-quaternary);
 }
 
 .guide__desc {
@@ -630,4 +631,31 @@ button {
     color: var(--primary);
     font-size: 1.4rem;
     font-weight: 400;
+}
+
+/* CTA-section */
+.cta-section__body {
+    background: var(--bg-color-quaternary);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.cta-section__heading {
+    position: relative;
+}
+
+.cta-section__heading::after {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -18px;
+    content: '';
+    width: 136px;
+    height: 2px;
+    background: var(--bg-color-secondary);
+}
+
+.cta-section__desc {
+    margin: 38px auto;
+    width: 617px;
 }
