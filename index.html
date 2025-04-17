@@ -42,9 +42,17 @@
         <header class="header sticky">
             <div class="main-content">
                 <div class="center-y">
-                    <a href="#" class="header__logo">
-                        <img src="./assets/img/logo.svg" alt="Shine smile" />
+                    <!-- Logo -->
+                    <a href="#" class="logo">
+                        <!-- <img src="./assets/img/logo.svg" alt="Shine smile" /> -->
+                        <div class="logo__circle"></div>
+                        <div class="logo__text">
+                            <strong class="logo__text--strong">shine</strong>
+                            smile
+                        </div>
                     </a>
+
+                    <!-- Nav bar -->
                     <nav class="header__nav">
                         <ul class="nav__list">
                             <li><a class="nav__link nav__link--active" href="#">Home</a></li>
@@ -53,6 +61,8 @@
                             <li><a class="nav__link" href="#doctors">Doctors</a></li>
                         </ul>
                     </nav>
+
+                    <!-- CTA group -->
                     <div class="header__cta-group center-y">
                         <a href="#!" class="cta-group__sign-in-btn">Sign in</a>
                         <a href="#!" class="btn btn--small">Sign up</a>
@@ -64,7 +74,7 @@
             <!-- Hero -->
             <section class="hero">
                 <div class="main-content">
-                    <div class="center-y">
+                    <div class="main-row center-y">
                         <div class="hero__content">
                             <h1 class="heading heading--lv1">Exceptional dental care for all ages.</h1>
                             <p class="desc desc--light hero__desc">
@@ -250,7 +260,7 @@
             <!-- Doctors -->
             <section id="doctors" class="dentists section-spacing">
                 <div class="main-content">
-                    <div class="dentists__row-top">
+                    <div class="dentists__header">
                         <h2 class="heading heading--lv2">Our virtual dentist</h2>
                         <a href="#!" class="btn dentists__btn">Meet our dentist</a>
                     </div>
@@ -301,7 +311,8 @@
 
                     <!-- Dentist controls -->
                     <div class="controls dentist__controls">
-                        <div class="control-btn">
+                        <!-- prev -->
+                        <button class="control-btn">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="6"
@@ -316,8 +327,10 @@
                                     stroke-linejoin="round"
                                 />
                             </svg>
-                        </div>
-                        <div class="control-btn">
+                        </button>
+
+                        <!-- next -->
+                        <button class="control-btn">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="6"
@@ -332,7 +345,7 @@
                                     stroke-linejoin="round"
                                 />
                             </svg>
-                        </div>
+                        </button>
                     </div>
                 </div>
             </section>
@@ -375,7 +388,9 @@
                             <div class="blog__blog-list">
                                 <!-- Blog item 1 -->
                                 <article class="blog-list__blog-item">
-                                    <div class="image blog-item__image blog-item__img1"></div>
+                                    <figure>
+                                        <a href="#!"><div class="image blog-item__image blog-item__img1"></div></a>
+                                    </figure>
                                     <div class="blog-item__info">
                                         <a href="#!" class="heading heading--lv5 line-clamp line-2"
                                             >Key Considerations for Regulatory Compliant.</a
@@ -390,7 +405,9 @@
 
                                 <!-- Blog item 2 -->
                                 <article class="blog-list__blog-item">
-                                    <div class="image blog-item__image blog-item__img2"></div>
+                                    <figure>
+                                        <a href="#!"><div class="image blog-item__image blog-item__img2"></div></a>
+                                    </figure>
                                     <div class="blog-item__info">
                                         <a href="#!" class="heading heading--lv5 line-clamp line-2"
                                             >Key Considerations for Regulatory Compliant.</a
@@ -410,7 +427,8 @@
 
                             <!-- Blog controls -->
                             <div class="controls blog__controls">
-                                <div class="control-btn">
+                                <!-- prev -->
+                                <button class="control-btn">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="6"
@@ -425,8 +443,10 @@
                                             stroke-linejoin="round"
                                         />
                                     </svg>
-                                </div>
-                                <div class="control-btn">
+                                </button>
+
+                                <!-- next -->
+                                <button class="control-btn">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="6"
@@ -441,7 +461,7 @@
                                             stroke-linejoin="round"
                                         />
                                     </svg>
-                                </div>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -466,7 +486,7 @@
                 <div class="footer__row-top">
                     <!-- Footer column 1 -->
                     <div class="footer__column-1">
-                        <img src="./assets/img/logo.svg" alt="Shine smile" />
+                        <img class="footer__logo" src="./assets/img/logo.svg" alt="Shine smile" />
                         <p class="footer__desc--large">
                             Exceptional dental care for all ages. Your great smile begins with a great dentist.
                         </p>
@@ -545,14 +565,16 @@
                         <p class="footer__desc column-4__desc">
                             Subscribe our newsletter for the latest update of Dental care
                         </p>
+                        <!-- Footer form -->
                         <form action="#!" class="footer__subscription">
                             <input
+                                id="email"
                                 type="email"
                                 name="email"
-                                class="subscription__input subscription__email"
+                                class="subscription__item subscription__email"
                                 placeholder="Enter your email..."
                             />
-                            <input type="submit" class="subscription__input subscription__submit" value="Subscribe" />
+                            <input type="submit" class="subscription__item subscription__submit" value="Subscribe" />
                         </form>
                     </div>
                 </div>
